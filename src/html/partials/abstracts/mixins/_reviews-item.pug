@@ -1,8 +1,0 @@
-mixin reviewsItem(title, company, comment)
-  +b.ARTICLE.review(itemscope, itemtype="http://schema.org/Review")
-    +e.H2.title(itemprop="headline") #{title}
-    +e.company Компания:
-      span(itemprop="author") #{company}
-    +e.text Комментарий:
-      span(itemprop="citation") #{comment}
-
