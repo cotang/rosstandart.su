@@ -1,0 +1,6 @@
+mixin newsItem(title, date, text)
+  +b.ARTICLE.news-item(itemscope, itemtype="http://schema.org/Article")
+    +e.H2.subtitle
+      a(href="single-news.html", itemprop="headline") #{title} 
+    +e.date #{date}
+    +e.text(itemprop="articleBody") !{text}

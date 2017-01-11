@@ -1,0 +1,34 @@
+extends partials/templates/_template.pug
+
+block content
+  +b.SECTION.page--front-page
+    - var index = true
+    .container
+      +e.inner.row
+
+        .col-xs-12.col-xl-7.push-xl-2
+          // Banner
+          include partials/components/_banner.pug 
+          // Content
+          +b.SECTION.content(itemscope, itemtype="http://schema.org/Article")        
+            +e.H1.title(itemprop="headline") Главная страница (h1)
+            +e.img
+              img(src="img/main-pic.png", alt="pic", title="pic", itemprop="logo")            
+            +e.text(itemprop="articleBody")
+              p Приветствуем вас на сайте официального Центра сертификации «Сертификация», представляющего интересы государства на рынке сертификации и подтверждения соответствия продукции и услуг. Мы оказываем профессиональную поддержку российским предприятиям, стремящимся к выпуску продукции самого высокого качества. Наши специалисты, эксперты в области сертификации продукции и услуг, имеют огромный опыт работы с ведущими испытательными лабораториями и органами по сертификации. А основой нашей работы является индивидуальный подход к каждому заказчику. Центр сертификации «Сертификация» — это разумная ценовая политика и ориентированность на конечный результат. Мы заинтересованы в долгосрочном сотрудничестве с отечественными и зарубежными производителями — на благо России и ее граждан. Обращаясь в Центр сертификации «Сертификация», вы получите профессиональное и комплексное решение вопросов, связанных с сертификацией продукции и услуг вашего предприятия. Выбирайте качество — обращайтесь к профессионалам!
+          // Info blocks
+          include partials/components/_info-blocks.pug 
+          // Bottom links
+          include partials/components/_bottom-links.pug
+          // Cities
+          include partials/components/_cities.pug
+
+        .col-xs-12.col-xl-2.pull-xl-7    
+          // Left sidebar
+          include partials/components/_left-sidebar.pug 
+
+        .col-xs-12.col-xl-3
+          // Right sidebar
+          include partials/components/_right-sidebar.pug 
+
+

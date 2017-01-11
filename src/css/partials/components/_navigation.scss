@@ -1,0 +1,28 @@
+.navigation{
+  margin: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  &__link{
+    text-decoration: none;
+    font-weight: bold;
+    &--prev{
+      &:before{
+        content: '←';
+        margin-right: .5em;
+      }
+    }
+    &--next{
+      &:after{
+        content: '→';
+        margin-left: .5em;
+      }
+    }
+    &:focus, &:hover{
+      text-decoration: underline;
+    }
+  }
+}
+

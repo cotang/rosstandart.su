@@ -1,0 +1,96 @@
+.questions-section{
+  background-color: $dark-cyan;
+  padding-top: 140px;
+  padding-bottom: 120px;
+  @include mq($from:xs, $until:lg){
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+
+  &__form{
+    margin-left: -40px;
+    @include mq($from:xs, $until:xl){
+      margin-left: 0;
+    }
+  }
+}
+
+.manager-citation{
+  display: flex;  
+  @include mq($from:xs, $until:lg){
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 40px;
+  }
+
+  &__img{
+    flex: 0 0 220px;
+    width: 220px;
+    height: 220px;
+    @include mq($from:xs, $until:sm){
+      flex: 0 0 100%;
+      max-width: 220px;
+      margin-bottom: 30px;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+  &__wrapper{
+    flex: 1 1 auto;
+    margin: 0 40px;
+    @include mq($from:xs, $until:lg){
+      flex: 0 0 auto;
+      margin-right: 0;
+    }
+    @include mq($from:xs, $until:sm){
+      margin-left: 0;
+      flex: 0 0 100%;
+    }
+  }
+  &__citation-wrapper{
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      z-index: 1;
+      bottom: -8px;
+      left: 60px;
+      transform: skewY(-30deg);
+      height: 25px;
+      width: 30px;
+      background-color: $light-cyan;
+    }
+  }
+  &__citation{
+    @include font-family('Open Sans Bold', normal, normal);
+    max-width: 250px; 
+    position: relative; 
+    z-index: 2;  
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: $light-cyan;
+    color: $text-color-white;
+    font-size: $font-size-title;
+    @include mq($from:xs, $until:xl){
+      font-size: $font-size-biggest;
+    }
+    @include mq($from:xs, $until:sm){
+      max-width: initial;
+    }
+  }
+  &__name{
+    color: $text-color-white;
+    @include font-family('Open Sans Semibold', normal, normal);
+    font-size: $font-size-big;
+    margin: 45px 0 5px;
+  }
+  &__position{
+    color: $text-color-white;
+    opacity: .66;
+  }
+}

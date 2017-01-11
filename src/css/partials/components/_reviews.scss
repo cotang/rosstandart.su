@@ -1,0 +1,18 @@
+.reviews{
+  margin-top: 40px;
+}
+.review{
+  margin-bottom: 40px;
+  &__title{
+    font-weight: normal;
+    margin: 0 0 10px;
+    font-size: $font-size-bigger;
+  }
+  &__company{
+    margin-bottom: 10px;
+  }
+  &__text{
+    margin-bottom: 10px;
+  }  
+}
+

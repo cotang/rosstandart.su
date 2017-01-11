@@ -1,0 +1,48 @@
+.news-section{
+  margin-top: 70px;
+  margin-bottom: 70px;
+  @include mq($from:xs, $until:lg){
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  &__title{
+    font-size: $font-size-title;
+    @include font-family('Open Sans Bold', normal, normal);
+    color: $cyan;
+    margin-top: 0;
+    margin-bottom: 35px;   
+    @include mq($from:xs, $until:lg){
+      font-size: $font-size-biggest;
+    }
+  }
+}
+
+.news-section-article{
+  margin-bottom: 30px;
+  &__img{
+    width: 100%;
+    height: 0;
+    padding-bottom: 65%;
+    position: relative;
+    margin-bottom: 10px;
+    img{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }    
+  }
+  &__title{
+    margin: 0;
+    @include font-family('Open Sans Semibold', normal, normal);
+  }
+  &__date{
+    font-size: $font-size-small;
+    display: inline-block;
+    color: $date-grey;    
+  }
+}
+

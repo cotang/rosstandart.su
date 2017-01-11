@@ -1,0 +1,127 @@
+.services{
+  padding-bottom: 80px;
+  @include mq($from:xs, $until:lg){
+    padding-bottom: 30px;
+  }
+  &__inner-cyan{    
+    background-color: $dark-cyan;    
+  }
+  &__title{
+    @include font-family('Open Sans Bold', normal, normal);
+    font-size: $font-size-title;
+    color: $cyan;
+    margin: 0;
+    padding: 15px 0 30px; 
+    @include mq($from:xs, $until:lg){
+      font-size: $font-size-biggest;
+      padding: 25px 0 20px; 
+    }
+    &--white{
+      color: $text-color-white;
+      padding: 45px 0 35px; 
+    }
+  }
+  &__types{
+    columns: 2;
+    margin: 100px 0 0;
+    @include mq($from:xs, $until:lg){
+      columns: 1;
+      margin: 50px 0 0;
+    }
+  }
+  &__btn{
+    text-align: center;
+  }
+}
+
+.services-type{
+  display: inline-flex;
+  vertical-align: top;
+  width: 100%;
+  margin-bottom: 35px;
+  @include mq($from:lg, $until:xl){
+    min-height: 180px;
+  }
+
+  &__icon{
+    flex: 0 0 auto;
+    &--eac{
+      @include sprite($s-services-eac);
+    }
+    &--rst{
+      @include sprite($s-services-rst);
+    }
+    &--folders{
+      @include sprite($s-services-folders);
+    }
+    &--fire{
+      @include sprite($s-services-fire);
+    }
+    &--eagle{
+      @include sprite($s-services-eagle);
+    }
+    &--iso{
+      @include sprite($s-services-iso);
+    }
+    &--letters{
+      @include sprite($s-services-letters);
+    }
+    &--eco{
+      @include sprite($s-services-eco);
+    }
+    &--water{
+      @include sprite($s-services-water);
+    }
+    &--globe{
+      @include sprite($s-services-globe);
+    }
+    &--scheme{
+      @include sprite($s-services-scheme);
+    }
+    &--auto{
+      @include sprite($s-services-auto);
+    }
+    &--other{
+      @include sprite($s-services-other);
+    }
+  }
+
+  &__title{
+    @include font-family('Open Sans Bold', normal, normal);
+    font-size: $font-size-biggest;
+    margin: 0; 
+    @include mq($from:xs, $until:lg){
+      font-size: $font-size-big;
+    }    
+  }
+  &__title-link{
+    color: $cyan;
+  }
+  &__text{
+    flex: 1 1 auto;
+    padding-left: 40px;
+    @include mq($from:xs, $until:md){
+      padding-left: 20px;
+      // max-width: 225px;
+    }
+  }
+  &__list{
+    @include font-family('Open Sans Semibold', normal, normal);
+    padding-left: 0;
+    margin: 10px 0;
+    list-style-type: none;
+    font-size: $font-size-big; 
+    @include mq($from:xs, $until:lg){
+      font-size: $font-size;
+    }  
+  }
+  &__item{
+    margin-bottom: 10px;
+
+  }
+  &__link{
+    color: $text-blue-services;
+    display: inline-block;
+    // white-space: pre-wrap;
+  }
+}

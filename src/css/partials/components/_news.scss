@@ -1,0 +1,12 @@
+.news{
+  margin-top: 35px;
+}
+
+.news-item{
+  margin-bottom: 50px;
+  &__title{
+    margin: 10px 0 10px;
+    font-weight: normal;
+    font-size: $font-size-bigger;
+  }  
+}

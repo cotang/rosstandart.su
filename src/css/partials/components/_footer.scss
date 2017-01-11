@@ -1,0 +1,90 @@
+.footer{
+  &__inner{
+    padding: 15px;
+    border: 1px solid $cyan;
+    background-image: linear-gradient(to top, #006898, #00426b);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__logo{
+    @include mq($from:xs, $until:md){
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin: 0 0 15px;
+      text-align: center;
+    }
+  }
+  &__info{
+    @include mq($from:xs, $until:md){
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+}
+    
+.nav-footer{
+  &__list{
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    @include mq($from:xs, $until:md){
+      flex-wrap: wrap;
+      text-align: center;
+      margin: 0 0 15px;
+    }
+  }
+  &__item{
+    padding: 0 10px;
+    @include mq($from:xs, $until:md){
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-top: 10px;
+    }
+  }
+  &__link{
+    color: $text-color-white;
+  }
+}
+
+.social{
+  text-align: right;
+  &__link{
+    display: inline-block;
+    border-radius: 5px;
+    &--tw{
+      @include sprite($s-social-tw);
+    }
+    &--vk{
+      @include sprite($s-social-vk);
+    }
+    &--rss{
+      @include sprite($s-social-rss);
+    }
+  }
+}
+.counters{
+  margin-top: 10px;
+  text-align: right;
+  &__link{
+    display: inline-block;
+    width: 140px;
+    height: 30px;
+    background-color: #fff;
+  }  
+}
+
+.up{
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 3px 15px;
+  border-radius: 5px 5px 0 0;
+  background-color: $link-blue;
+  border: 1px solid $cyan;
+  color: $text-color-white;
+  text-decoration: none;
+}

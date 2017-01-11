@@ -1,0 +1,84 @@
+.clients{
+  // background-color: red;
+  background-color: $pale;
+  padding-top: 70px;
+  padding-bottom: 90px;
+  @include mq($from:xs, $until:lg){
+    padding-top: 40px;
+    padding-bottom: 30px;
+  }
+
+  &__title{
+    @include font-family('Open Sans Bold', normal, normal);
+    font-size: $font-size-title;
+    color: $text-grey-title;
+    margin: 0 0 30px;  
+    @include mq($from:xs, $until:lg){
+      font-size: $font-size-biggest;
+    } 
+  }
+  &__gallery{
+    margin: 0 -15px;
+  }
+  .slick-prev{
+    left: -80px;
+    @include mq($from:xs, $until:xl){
+      left: 20px;
+      opacity: .3;
+      &:hover, &:focus {
+        opacity: 1;
+      }
+    }
+  }
+  .slick-next{
+    right: -80px;
+    @include mq($from:xs, $until:xl){
+      right: 20px;
+      opacity: .3;
+      &:hover, &:focus {
+        opacity: 1;
+      }
+    }
+  }
+}
+.client-slide{
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.03);
+  border-radius: 5px;
+  background-color: $white;
+  margin: 0 15px;
+  padding: 50px 0;
+  &__flex{
+    display: flex;
+  }  
+  &__img{
+    margin: 0 10px;
+    width: 100px;
+    height: 100px;
+    img{
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+    }
+  }
+  &__inner{
+    margin: 0 10px;
+  }
+  &__author{
+    @include font-family('Open Sans Semibold', normal, normal);
+    font-size: $font-size-big;
+    color: $text-blue;
+  }
+  &__services-title{
+    margin: 10px 0;
+    @include font-family('Open Sans Bold', normal, normal);
+    color: $cyan;
+  }
+  &__services{
+    color: $text-grey;
+    ul{
+      padding-left: 20px;
+    }
+  }
+}
+

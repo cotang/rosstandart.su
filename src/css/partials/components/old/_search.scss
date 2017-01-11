@@ -1,0 +1,33 @@
+.search{
+  background-color: $lightest-grey;
+  border-radius: 3px;
+  padding: 20px 30px;
+
+  &__form{
+    display: flex;
+    flex-wrap: wrap;
+    @include mq($from:xs, $until:sm){
+      justify-content: center;
+    }
+  }
+  &__input{
+    flex: 1 1 auto;
+    background-color: $white;
+    padding: 10px 15px;
+    border: 1px solid $border-grey;
+    outline: none;
+    border-radius: 3px 0 0 3px;
+    @include mq($from:xs, $until:sm){
+      flex: 1 1 100%;
+      margin-bottom: 15px;
+    }
+
+    &:focus::-webkit-input-placeholder{
+      color: transparent;         
+    }       
+    &:focus::placeholder{
+      color: transparent;         
+    } 
+  }
+}
+

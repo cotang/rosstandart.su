@@ -1,0 +1,48 @@
+.guide{
+  background-color: $dark-cyan;
+  &__inner{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  &__icon-wrapper{
+    @include mq($from:xs, $until:lg){
+      flex: 0 0 100%;
+    }
+  }
+  &__icon{
+    background-image: url(../img/guide.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 276px;
+    height: 168px;
+    margin: 40px;
+    @include mq($from:xs, $until:lg){
+      margin: 40px auto;
+    }
+  }
+
+  &__wrapper{
+    padding: 90px 40px 100px; 
+    flex: 0 0 45%;
+    max-width: 45%;
+    @include mq($from:xs, $until:lg){
+      flex: 0 0 100%;
+      max-width: 100%;
+      padding: 0 40px 30px;
+      text-align: center;
+    }  
+  }
+  &__title{
+    font-size: $font-size-title;
+    @include font-family('Open Sans Bold', normal, normal);
+    color: $text-color-white;
+    margin-top: 0;
+    margin-bottom: 30px;  
+    @include mq($from:xs, $until:lg){
+      font-size: $font-size-biggest;
+    }
+  }
+}
+

@@ -1,0 +1,107 @@
+- var application = [{name: 'application', title : 'Заказать документ онлайн', button: 'Заказать документ', success: 'Ваша заявка отправлена'}] 
+- var question = [{name: 'question', title : 'Задать вопрос', button: 'Задать вопрос', success: 'Ваш вопрос отправлен'}] 
+- var call = [{name: 'call', title : 'Для получения бесплатной консультации заполните форму', button: 'Отправить', success: 'Ваш запрос отправлен'}] 
+- var review = [{name: 'review', title : 'Напишите отзыв о нашей работе', button: 'Отправить отзыв', success: 'Отзыв успешно отправлен'}] 
+
+mixin form(items)
+  each item in items
+    +b.SECTION(class= 'form--' + item.name)
+      form(action='', method='')
+        //- +e.A.close(href='#')
+        //- +e.H3.title #{item.title}          
+
+        if item.name == 'application'
+          .form-group.field-product.required
+            +e.description Наименование продукта*
+            +e.INPUT.input(type='text', name='Продукт')
+            p.help-block Ошибка заполнения поля формы
+          .form-group.field-name.required
+            +e.description Ваше имя*
+            +e.INPUT.input(type='text', name='Имя')
+            p.help-block Ошибка заполнения поля формы
+          .form-group.field-tel
+            +e.description Ваш телефон*
+            +e.INPUT.input(type='tel', name='Телефон')
+            p.help-block Ошибка заполнения поля формы
+          .form-group.field-email.required
+            +e.description Ваш email*
+            +e.INPUT.input(type='email', name='Email')
+            p.help-block Ошибка заполнения поля формы
+
+        if item.name == 'question'
+          .form-group.field-name.required
+            +e.description Ваше имя*
+            +e.INPUT.input(type='text', name='Имя')
+            p.help-block Ошибка заполнения поля формы
+          .form-group.field-email.required
+            +e.description Ваш email*
+            +e.INPUT.input(type='email', name='Email')
+            p.help-block Ошибка заполнения поля формы
+          .form-group.field-tel
+            +e.description Ваш телефон*
+            +e.INPUT.input(type='tel', name='Телефон')
+            p.help-block Ошибка заполнения поля формы
+          .form-group.field-question.required
+            +e.description Ваш вопрос*
+            +e.TEXTAREA.textarea(name='Вопрос') 
+            p.help-block Ошибка заполнения поля формы
+
+        if item.name == 'call'
+          .form-group.field-name.required
+            +e.description Ваше имя*
+            +e.INPUT.input(type='text', name='Имя')
+            p.help-block Ошибка заполнения поля формы
+          .form-group.field-tel.required
+            +e.description Ваш телефон*
+            +e.INPUT.input(type='tel', name='Телефон')
+            p.help-block Ошибка заполнения поля формы
+
+        if item.name == 'review'
+          .form-group.field-name.required
+            +e.description Ваше имя*
+            +e.INPUT.input(type='text', name='Имя')
+            p.help-block Ошибка заполнения поля формы
+          .form-group.field-email.required
+            +e.description Ваш e-mail*
+            +e.INPUT.input(type='email', name='Email')
+            p.help-block Ошибка заполнения поля формы
+          .form-group.field-review.required
+            +e.description Ваш отзыв*
+            +e.TEXTAREA.textarea(name='Отзыв') 
+            p.help-block Ошибка заполнения поля формы
+
+        //- .form-group.field-country.required
+        //-   +e.description Страна*
+        //-   +e.SELECT.select
+        //-     option Россия
+        //-     option Беларусь
+        //-     option Казахстан
+        //-     option Украина
+        //-     option Азербайджан
+        //-     option Армения    
+        //-     option Грузия
+        //-     option Молдавия
+
+        //- .form-group.field-region.required
+        //-   +e.description Регион*
+        //-   +e.SELECT.select
+        //-     option Санкт-Петербург и Ленинградская область
+        //-     option Москва и Московская область
+        //-     option Новгородская область
+        //-     option Псковская область
+        //-     option Республика Карелия
+        //-     option Мурманская область
+        //-     option Калининградская область
+        //-     option Вологодская область
+        //-     option Тверская область
+
+        .form-group
+          +b.BUTTON.btn--form(type='submit') #{item.button}
+          p.help-block.help-block-success #{item.success}
+
+
+
+
+
+
+

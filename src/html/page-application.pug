@@ -1,0 +1,30 @@
+extends partials/templates/_template.pug
+
+block content
+  +b.SECTION.page--application
+    .container
+      +e.inner.row
+
+        .col-xs-12.col-xl-7.push-xl-2
+          // Breadcrumbs
+          +b.breadcrumbs
+            +e.inner
+              a(href="index.html") Сертификация
+              ='>'
+              span Заказать сертификат
+          // Content
+          +b.SECTION.content
+            +e.H1.title Заказать сертификат
+          // Form application
+          include partials/components/_form--application.pug            
+
+          // Cities
+          include partials/components/_cities.pug
+
+        .col-xs-12.col-xl-2.pull-xl-7    
+          // Left sidebar
+          include partials/components/_left-sidebar.pug 
+
+        .col-xs-12.col-xl-3
+          // Right sidebar
+          include partials/components/_right-sidebar.pug 

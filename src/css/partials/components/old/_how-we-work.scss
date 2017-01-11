@@ -1,0 +1,59 @@
+.how-we-work{
+  margin-top: 70px;
+  margin-bottom: 70px;
+  @include mq($from:xs, $until:lg){
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  &__title{
+    font-size: $font-size-title;
+    @include font-family('Open Sans Bold', normal, normal);
+    color: $cyan;
+    margin: 0 0 70px;   
+    @include mq($from:xs, $until:lg){
+      font-size: $font-size-biggest;
+    }
+  }
+  &__list{
+    padding-left: 0;
+    margin: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    @include mq($from:xs, $until:lg){
+      flex-wrap: wrap;
+    }    
+  }
+  &__item{
+    display: flex;
+    flex: 1 1 auto;
+    @include mq($from:xs, $until:lg){
+      flex: 1 1 calc(100% - 55px);
+      flex-basis: calc(100% - 55px);
+      margin-bottom: 20px;
+    } 
+  }
+  &__number{
+    position: relative;
+    top: -10px;
+    @include font-family('Open Sans Bold', normal, normal);
+    color: $red;
+    font-size: $font-size-supertitle;
+    flex: 0 0 auto;
+  }
+  &__text{
+    @include font-family('Open Sans Semibold', normal, normal);
+    font-size: $font-size-big;
+    color: $text-grey-title;
+    flex: 1 1 auto;
+    padding-left: 15px;
+    @include mq($from:xs, $until:sm){
+      font-size: $font-size;
+    }
+  }
+  &__arrow{
+    flex: 0 0 auto;
+    margin: 0 15px;
+    @include sprite($s-arrow-steps);
+  }
+}

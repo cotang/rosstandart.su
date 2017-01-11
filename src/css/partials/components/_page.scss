@@ -1,0 +1,10 @@
+.page{  
+  &__inner{
+    padding-bottom: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    background-color: $bg-light-blue;
+    box-shadow: 0 -10px 0px 0px #e8fafb, 0 0 10px -2px #00426c, 0 -7px 10px -2px #00426c;
+  }
+}
+

@@ -1,0 +1,10 @@
+.recommendations{  
+  background-color: $city-grey;
+  padding: 10px;
+  &__title{
+    font-size: $font-size-bigger;
+    margin: 0;
+    padding: 0 20px;
+  }
+}
+
